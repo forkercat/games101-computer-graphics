@@ -8,7 +8,8 @@ https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
 
 Implement Möller-Trumbore algorithm to do ray-triangle intersection.
 
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/1v5i8.png)
+<img src="https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/1v5i8.png" width="600">
+
 
 **Note:** Check `tnear < 0` before for invalid ray directions.
 
@@ -18,4 +19,4 @@ Implement Möller-Trumbore algorithm to do ray-triangle intersection.
 
 Implement AABB intersection and BVH lookup algorithm.
 
-![](https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/gyk5l.png)
+<img src="https://bloggg-1254259681.cos.na-siliconvalley.myqcloud.com/gyk5l.png" width="600">
