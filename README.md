@@ -4,7 +4,7 @@ Course Website:
 https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
 
 
-## Assignment 5
+## Assignment 5 (Möller-Trumbore)
 
 Implement Möller-Trumbore algorithm to do ray-triangle intersection.
 

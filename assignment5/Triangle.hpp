@@ -4,7 +4,7 @@
 
 #include <cstring>
 
-// #define CULLING
+#define CULLING
 
 bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f& v2, const Vector3f& orig,
                           const Vector3f& dir, float& tnear, float& u, float& v)
@@ -26,7 +26,7 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
 #endif
 
     // Parallel
-    // if (abs(s1_dot_e1) < 0.001) return false;
+    if (abs(s1_dot_e1) < 0.001) return false;
 
     float inv = 1.0f / s1_dot_e1;
 

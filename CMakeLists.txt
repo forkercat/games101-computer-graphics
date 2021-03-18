@@ -17,3 +17,17 @@ add_executable(Assignment5
 target_compile_options(Assignment5 PUBLIC -Wall -Wextra -pedantic -Wshadow -Wreturn-type -fsanitize=undefined)
 target_compile_features(Assignment5 PUBLIC cxx_std_17)
 target_link_libraries(Assignment5 PUBLIC -fsanitize=undefined)
+
+
+
+add_executable(Assignment6
+    assignment6/main.cpp
+    assignment6/Object.hpp
+    assignment6/Vector.cpp assignment6/Vector.hpp
+    assignment6/Sphere.hpp assignment6/global.hpp
+    assignment6/Triangle.hpp
+    assignment6/Scene.cpp assignment6/Scene.hpp
+    assignment6/Light.hpp assignment6/AreaLight.hpp
+    assignment6/BVH.cpp assignment6/BVH.hpp assignment6/Bounds3.hpp
+    assignment6/Ray.hpp assignment6/Material.hpp assignment6/Intersection.hpp
+    assignment6/Renderer.cpp assignment6/Renderer.hpp)
