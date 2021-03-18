@@ -3,6 +3,7 @@ project(RayTracing)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Assignment 5
 add_executable(Assignment5
     assignment5/main.cpp
     assignment5/Object.hpp
@@ -18,8 +19,7 @@ target_compile_options(Assignment5 PUBLIC -Wall -Wextra -pedantic -Wshadow -Wret
 target_compile_features(Assignment5 PUBLIC cxx_std_17)
 target_link_libraries(Assignment5 PUBLIC -fsanitize=undefined)
 
-
-
+# Assignment 6
 add_executable(Assignment6
     assignment6/main.cpp
     assignment6/Object.hpp
@@ -31,3 +31,14 @@ add_executable(Assignment6
     assignment6/BVH.cpp assignment6/BVH.hpp assignment6/Bounds3.hpp
     assignment6/Ray.hpp assignment6/Material.hpp assignment6/Intersection.hpp
     assignment6/Renderer.cpp assignment6/Renderer.hpp)
+
+# Assignment 7
+add_executable(Assignment7
+    assignment7/main.cpp assignment7/Object.hpp
+    assignment7/Vector.cpp assignment7/Vector.hpp
+    assignment7/Sphere.hpp assignment7/global.hpp assignment7/Triangle.hpp
+    assignment7/Scene.cpp assignment7/Scene.hpp
+    assignment7/Light.hpp assignment7/AreaLight.hpp
+    assignment7/BVH.cpp assignment7/BVH.hpp assignment7/Bounds3.hpp
+    assignment7/Ray.hpp assignment7/Material.hpp assignment7/Intersection.hpp
+    assignment7/Renderer.cpp assignment7/Renderer.hpp)
