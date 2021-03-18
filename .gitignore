@@ -17,8 +17,10 @@ Makefile
 
 # resources
 
-
 # specific sources
+
+# personal
+.clang-format
 
 # output
 output/

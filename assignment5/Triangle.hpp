@@ -4,6 +4,8 @@
 
 #include <cstring>
 
+// #define CULLING
+
 bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f& v2, const Vector3f& orig,
                           const Vector3f& dir, float& tnear, float& u, float& v)
 {
@@ -11,7 +13,38 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
     // that's specified bt v0, v1 and v2 intersects with the ray (whose
     // origin is *orig* and direction is *dir*)
     // Also don't forget to update tnear, u and v.
-    return false;
+
+    Vector3f e1 = v1 - v0;
+    Vector3f e2 = v2 - v0;
+
+    Vector3f s1 = crossProduct(dir, e2);
+    float s1_dot_e1 = dotProduct(s1, e1);
+
+#ifdef CULLING
+    // Back-face Culling
+    if (s1_dot_e1 < 0) return false;
+#endif
+
+    // Parallel
+    // if (abs(s1_dot_e1) < 0.001) return false;
+
+    float inv = 1.0f / s1_dot_e1;
+
+    // u
+    Vector3f s = orig - v0;
+    u = dotProduct(s1, s) * inv;
+    if (u < 0 || u > 1) return false;
+
+    // v
+    Vector3f s2 = crossProduct(s, e1);
+    v = dotProduct(s2, dir) * inv;
+    if (v < 0 || u + v > 1) return false;
+
+    // t
+    tnear = dotProduct(s2, e2) * inv;
+    if (tnear < 0) return false;
+
+    return true;
 }
 
 class MeshTriangle : public Object
